@@ -9,4 +9,6 @@ public interface CustomerService {
     List<Customer> listCustomers();
 
     Customer findCustomerById(UUID id);
+
+    Customer addNewCustomer(Customer customer);
 }
