@@ -20,13 +20,13 @@ public class BeerController {
 
     private final BeerService beerService;
 
-//    @PostMapping
-//    public ResponseEntity handlePost(Beer beer) {
-//
-//        Beer savedBeer = beerService.saveNewBeer(beer);
-//
-//        return new ResponseEntity(HttpStatus.CREATED);
-//    }
+    @PostMapping
+    public ResponseEntity handlePost(@RequestBody Beer beer) {
+
+        Beer savedBeer = beerService.saveNewBeer(beer);
+
+        return new ResponseEntity(HttpStatus.CREATED);
+    }
 
     @GetMapping
     public List<Beer> listBeer() {
