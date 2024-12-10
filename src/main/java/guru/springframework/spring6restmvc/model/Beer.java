@@ -1,7 +1,6 @@
 package guru.springframework.spring6restmvc.model;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
