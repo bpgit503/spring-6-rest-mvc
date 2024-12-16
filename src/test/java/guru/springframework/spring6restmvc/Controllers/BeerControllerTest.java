@@ -52,9 +52,9 @@ class BeerControllerTest {
         given(beerService.saveNewBeer(any(Beer.class))).willReturn(beerServiceImpl.listBeer().get(1));
 
         mockMvc.perform(post("/api/v1/beer")
-                .accept(MediaType.APPLICATION_JSON)
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(beer)))
+                        .accept(MediaType.APPLICATION_JSON)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(beer)))
                 .andExpect(status().isCreated())
                 .andExpect(header().exists("Location"));
     }
