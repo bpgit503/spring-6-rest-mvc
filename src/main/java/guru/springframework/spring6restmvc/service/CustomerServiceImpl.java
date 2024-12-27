@@ -58,7 +58,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer addNewCustomer(Customer customer) {
+    public Customer saveNewCustomer(Customer customer) {
 
         Customer newCustomer = Customer.builder()
                 .id(UUID.randomUUID())

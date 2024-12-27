@@ -10,7 +10,7 @@ public interface CustomerService {
 
     Customer findCustomerById(UUID id);
 
-    Customer addNewCustomer(Customer customer);
+    Customer saveNewCustomer(Customer customer);
 
     void updateById(UUID customerId, Customer customer);
 

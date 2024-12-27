@@ -1,9 +1,7 @@
 package guru.springframework.spring6restmvc.Controllers;
 
-import guru.springframework.spring6restmvc.model.Beer;
 import guru.springframework.spring6restmvc.model.Customer;
 import guru.springframework.spring6restmvc.service.CustomerService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
@@ -50,7 +48,7 @@ public class CustomerController {
     @PostMapping
     public ResponseEntity addCustomer(@RequestBody Customer customer) {
 
-        Customer savedCustomer = customerService.addNewCustomer(customer);
+        Customer savedCustomer = customerService.saveNewCustomer(customer);
 
         HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.add("Location", "/api/v1/customer/"+ savedCustomer.getId().toString());
